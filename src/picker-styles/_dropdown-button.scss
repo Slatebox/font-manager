@@ -1,4 +1,5 @@
 @use "sass:color";
+@use "variables" as *;
 
 // Dropdown menu containing the pickerId of the active font and the dropdown icon
 // (loading/arrow/error)

@@ -1,4 +1,7 @@
-@import "variables";
+@use "variables" as *;
+@use "reset" as *;
+@use "dropdown-button" as *;
+@use "dropdown-list" as *;
 
 // Match all font picker IDs (e.g. "font-picker", "font-picker-main", ...)
 div[id^="font-picker"] {
@@ -6,8 +9,9 @@ div[id^="font-picker"] {
 	display: inline-block;
 	width: 200px;
 	box-shadow: $box-shadow;
+}
 
-	@import "reset";
-	@import "dropdown-button";
-	@import "dropdown-list";
+// Apply the dropdown class to the same element
+div[id^="font-picker"] {
+	@extend .font-picker-dropdown;
 }

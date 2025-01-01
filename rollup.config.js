@@ -3,7 +3,9 @@ import postcss from "rollup-plugin-postcss";
 import json from "@rollup/plugin-json";
 import typescript from "rollup-plugin-typescript2";
 import postcssImport from "postcss-import";
-import pkg from "./package.json" assert { type: "json" };
+import { readFileSync } from "fs";
+
+const pkg = JSON.parse(readFileSync(new URL("./package.json", import.meta.url)));
 
 export default {
 	input: "./src/index.ts",

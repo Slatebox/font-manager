@@ -1,46 +1,48 @@
 @use "sass:color";
+@use "variables" as *;
 
 // Font list
+.font-picker-dropdown {
+	&.expanded ul {
+		max-height: 200px;
+	}
 
-&.expanded ul {
-	max-height: 200px;
-}
+	ul {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		max-height: 0;
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+		overflow-y: auto;
+		background: $color-font-list;
+		box-shadow: $box-shadow;
+		transition: $transition-duration;
+		-webkit-overflow-scrolling: touch;
 
-ul {
-	position: absolute;
-	z-index: 1;
-	width: 100%;
-	max-height: 0;
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
-	overflow-y: auto;
-	background: $color-font-list;
-	box-shadow: $box-shadow;
-	transition: $transition-duration;
-	-webkit-overflow-scrolling: touch;
+		// Font list elements
+		li {
+			height: $element-height;
+			list-style: none;
 
-	// Font list elements
-	li {
-		height: $element-height;
-		list-style: none;
+			// Button inside font list element (completely fills <li>)
+			button {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+				padding: 0 10px;
+				white-space: nowrap;
 
-		// Button inside font list element (completely fills <li>)
-		button {
-			display: flex;
-			align-items: center;
-			width: 100%;
-			height: 100%;
-			padding: 0 10px;
-			white-space: nowrap;
+				&:hover,
+				&:focus {
+					background: color.scale($color-font-list, $lightness: -5%);
+				}
 
-			&:hover,
-			&:focus {
-				background: color.scale($color-font-list, $lightness: -5%);
-			}
-
-			&.active-font {
-				background: color.scale($color-font-list, $lightness: -10%);
+				&.active-font {
+					background: color.scale($color-font-list, $lightness: -10%);
+				}
 			}
 		}
 	}
