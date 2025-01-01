@@ -24,6 +24,10 @@ jobs:
           npm ci --legacy-peer-deps
         name: Install production dependencies
 
+      # Install npm-run-all globally
+      - run: npm install -g npm-run-all
+        name: Install npm-run-all
+
       # Build the project
       - run: npm run build
         name: Build project
