@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Font list
 
 &.expanded ul {
@@ -34,11 +36,11 @@ ul {
 
 			&:hover,
 			&:focus {
-				background: darken($color-font-list, 5%);
+				background: color.scale($color-font-list, $lightness: -5%);
 			}
 
 			&.active-font {
-				background: darken($color-font-list, 10%);
+				background: color.scale($color-font-list, $lightness: -10%);
 			}
 		}
 	}

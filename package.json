@@ -1,14 +1,14 @@
 {
-	"name": "font-manager",
+	"name": "@slatebox/font-manager",
 	"version": "1.5.0",
 	"type": "module",
 	"description": "Manages, downloads and applies Google Fonts for picker components",
 	"author": {
-		"name": "Samuel Meuli",
-		"email": "me@samuelmeuli.com",
-		"url": "https://samuelmeuli.com"
+		"name": "Tim Heckel",
+		"email": "tim@slatebox.com",
+		"url": "https://slatebox.com"
 	},
-	"repository": "github:samuelmeuli/font-manager",
+	"repository": "github:slatebox/font-manager",
 	"license": "MIT",
 	"keywords": [
 		"fonts",
