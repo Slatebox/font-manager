@@ -21,7 +21,7 @@ export default class FontManager {
 	// Other class variables
 
 	// Name of currently applied font
-	private activeFontFamily: string;
+	private activeFontFamily: string = '';
 
 	// Map from font families to font objects
 	private fonts: FontList = new Map<string, Font>();

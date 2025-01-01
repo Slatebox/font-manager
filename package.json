@@ -1,6 +1,7 @@
 {
-	"name": "@samuelmeuli/font-manager",
-	"version": "1.4.0",
+	"name": "font-manager",
+	"version": "1.5.0",
+	"type": "module",
 	"description": "Manages, downloads and applies Google Fonts for picker components",
 	"author": {
 		"name": "Samuel Meuli",
@@ -19,7 +20,8 @@
 	"module": "./dist/index.es.js",
 	"types": "./dist/index.d.ts",
 	"files": [
-		"./dist/"
+		"./dist/",
+		"./dist/styles.css"
 	],
 	"scripts": {
 		"start": "rollup --config --sourcemap --watch",
@@ -38,42 +40,44 @@
 		"release": "np"
 	},
 	"dependencies": {
-		"@babel/runtime": "^7.9.2"
+		"@babel/runtime": "^7.25.7"
 	},
 	"devDependencies": {
-		"@samuelmeuli/eslint-config": "^6.0.0",
-		"@samuelmeuli/prettier-config": "^2.0.1",
-		"@samuelmeuli/stylelint-config": "^3.0.0",
-		"@samuelmeuli/tsconfig": "^1.0.0",
-		"@typescript-eslint/eslint-plugin": "^2.29.0",
-		"@typescript-eslint/parser": "^2.29.0",
-		"eslint": "6.8.0",
-		"eslint-config-airbnb-base": "14.1.0",
-		"eslint-config-prettier": "^6.11.0",
-		"eslint-plugin-import": "^2.20.2",
-		"np": "^6.2.2",
-		"npm-run-all": "^4.1.3",
-		"postcss-preset-env": "^6.7.0",
-		"prettier": "^2.0.5",
-		"rollup": "^1.32.1",
-		"rollup-plugin-postcss": "^2.9.0",
-		"rollup-plugin-typescript2": "^0.27.0",
-		"sass": "^1.26.3",
-		"stylelint": "^12.0.1",
-		"typescript": "^3.8.3"
+		"@rollup/plugin-json": "^6.1.0",
+		"@tsconfig/recommended": "^1.0.7",
+		"@typescript-eslint/eslint-plugin": "^8.8.1",
+		"@typescript-eslint/parser": "^8.8.1",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-import": "^2.31.0",
+		"np": "^10.0.7",
+		"npm-run-all": "^4.1.5",
+		"postcss": "^8.4.47",
+		"postcss-import": "^16.1.0",
+		"postcss-preset-env": "^10.0.7",
+		"postcss-scss": "^4.0.9",
+		"prettier": "^3.3.3",
+		"rollup": "^4.24.0",
+		"rollup-plugin-postcss": "^4.0.2",
+		"rollup-plugin-typescript2": "^0.36.0",
+		"sass": "^1.79.5",
+		"stylelint": "^16.10.0",
+		"stylelint-config-standard": "^36.0.1",
+		"tslib": "^2.7.0",
+		"typescript": "^5.6.3"
 	},
 	"browserslist": [
 		"defaults"
 	],
 	"eslintConfig": {
 		"root": true,
-		"extends": "@samuelmeuli/eslint-config/typescript",
+		"extends": "eslint-config-airbnb-base",
 		"env": {
 			"browser": true
 		}
 	},
 	"stylelint": {
-		"extends": "@samuelmeuli/stylelint-config"
+		"extends": "stylelint-config-standard"
 	},
-	"prettier": "@samuelmeuli/prettier-config"
+	"prettier": "prettier-config-standard"
 }
